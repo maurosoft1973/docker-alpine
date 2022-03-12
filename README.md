@@ -75,9 +75,6 @@ Alpine Linux is a Linux distribution built around musl libc and BusyBox. The ima
 ![Version](https://img.shields.io/badge/version-x86-blue.svg?style=for-the-badge)
 ![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/x86?style=for-the-badge)
 
-![Version](https://img.shields.io/badge/version-amd64-blue.svg?style=for-the-badge)
-![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/x86_64?style=for-the-badge)
-
 ## Environment Variables:
 
 ### Main parameters:
@@ -128,4 +125,4 @@ docker run --rm -it --name alpine -e LC_ALL=it_IT.UTF-8 -e TIMEZONE=Europe/Rome 
 ```
 
 ***
-###### Last Update 12.03.2022 16:37:16
+###### Last Update 12.03.2022 17:33:12
