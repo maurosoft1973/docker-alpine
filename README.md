@@ -4,11 +4,11 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/maurosoft1973/alpine.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/maurosoft1973/alpine/)
 [![Docker Stars](https://img.shields.io/docker/stars/maurosoft1973/alpine.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/maurosoft1973/alpine/)
 
-[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.14.3-green.svg?style=for-the-badge)](https://alpinelinux.org/)
+[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.15.0-green.svg?style=for-the-badge)](https://alpinelinux.org/)
 
 This Docker image [(maurosoft1973/alpine)](https://hub.docker.com/r/maurosoft1973/alpine/) is based on the minimal [Alpine Linux](https://alpinelinux.org/).
 
-##### Alpine Version 3.14.3 (Released Nov 12 2021)
+##### Alpine Version 3.15.0 (Released Nov 24 2021)
 
 This docker image is the base Alpine Linux. For more info on versions & support see [Releases](https://wiki.alpinelinux.org/wiki/Alpine_Linux:Releases)
 
@@ -49,31 +49,23 @@ Alpine Linux is a Linux distribution built around musl libc and BusyBox. The ima
 * ```:test-ppc64le```   test 64 bit PowerPC
 * ```:test-x86```       test 32 bit Intel/AMD
 * ```:test-x86_64```    test 64 bit Intel/AMD
-* ```:3.14.3``` 3.14.3 branch based (Automatic Architecture Selection)
-* ```:3.14.3-aarch64```   3.14.3 64 bit ARM
-* ```:3.14.3-armhf```     3.14.3 32 bit ARM v6
-* ```:3.14.3-armv7```     3.14.3 32 bit ARM v7
-* ```:3.14.3-ppc64le```   3.14.3 64 bit PowerPC
-* ```:3.14.3-x86```       3.14.3 32 bit Intel/AMD
-* ```:3.14.3-x86_64```    3.14.3 64 bit Intel/AMD
+* ```:3.15.0``` 3.15.0 branch based (Automatic Architecture Selection)
+* ```:3.15.0-aarch64```   3.15.0 64 bit ARM
+* ```:3.15.0-armhf```     3.15.0 32 bit ARM v6
+* ```:3.15.0-armv7```     3.15.0 32 bit ARM v7
+* ```:3.15.0-ppc64le```   3.15.0 64 bit PowerPC
+* ```:3.15.0-x86```       3.15.0 32 bit Intel/AMD
+* ```:3.15.0-x86_64```    3.15.0 64 bit Intel/AMD
 
 
 ## Layers & Sizes
 
-![Version](https://img.shields.io/badge/version-amd64-blue.svg?style=for-the-badge)
-![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/latest?style=for-the-badge)
+| ![Version](https://img.shields.io/badge/version-amd64-blue.svg?style=for-the-badge)   | ![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/latest?style=for-the-badge)  |
+| ![Version](https://img.shields.io/badge/version-armv6-blue.svg?style=for-the-badge)   | ![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/armhf?style=for-the-badge)   |
+| ![Version](https://img.shields.io/badge/version-armv7-blue.svg?style=for-the-badge)   | ![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/armv7?style=for-the-badge)   |
+| ![Version](https://img.shields.io/badge/version-ppc64le-blue.svg?style=for-the-badge) | ![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/ppc64le?style=for-the-badge) |
+| ![Version](https://img.shields.io/badge/version-x86-blue.svg?style=for-the-badge)     | ![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/x86?style=for-the-badge)     |
 
-![Version](https://img.shields.io/badge/version-armv6-blue.svg?style=for-the-badge)
-![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/armhf?style=for-the-badge)
-
-![Version](https://img.shields.io/badge/version-armv7-blue.svg?style=for-the-badge)
-![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/armv7?style=for-the-badge)
-
-![Version](https://img.shields.io/badge/version-ppc64le-blue.svg?style=for-the-badge)
-![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/ppc64le?style=for-the-badge)
-
-![Version](https://img.shields.io/badge/version-x86-blue.svg?style=for-the-badge)
-![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/x86?style=for-the-badge)
 
 ## Environment Variables:
 
@@ -105,6 +97,7 @@ When setting locale, also make sure to choose a locale otherwise it will be the 
 | ru_RU.UTF-8     |
 | sv_SE.UTF-8     |
 +-----------------+
+```
 
 ## Creating an instance (default timezone and locale)
 
@@ -125,4 +118,4 @@ docker run --rm -it --name alpine -e LC_ALL=it_IT.UTF-8 -e TIMEZONE=Europe/Rome 
 ```
 
 ***
-###### Last Update 13.03.2022 12:24:47
+###### Last Update 13.03.2022 12:55:46
