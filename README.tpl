@@ -60,20 +60,12 @@ Alpine Linux is a Linux distribution built around musl libc and BusyBox. The ima
 
 ## Layers & Sizes
 
-![Version](https://img.shields.io/badge/version-amd64-blue.svg?style=for-the-badge)
-![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/latest?style=for-the-badge)
+| ![Version](https://img.shields.io/badge/version-amd64-blue.svg?style=for-the-badge)   | ![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/latest?style=for-the-badge)  |
+| ![Version](https://img.shields.io/badge/version-armv6-blue.svg?style=for-the-badge)   | ![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/armhf?style=for-the-badge)   |
+| ![Version](https://img.shields.io/badge/version-armv7-blue.svg?style=for-the-badge)   | ![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/armv7?style=for-the-badge)   |
+| ![Version](https://img.shields.io/badge/version-ppc64le-blue.svg?style=for-the-badge) | ![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/ppc64le?style=for-the-badge) |
+| ![Version](https://img.shields.io/badge/version-x86-blue.svg?style=for-the-badge)     | ![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/x86?style=for-the-badge)     |
 
-![Version](https://img.shields.io/badge/version-armv6-blue.svg?style=for-the-badge)
-![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/armhf?style=for-the-badge)
-
-![Version](https://img.shields.io/badge/version-armv7-blue.svg?style=for-the-badge)
-![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/armv7?style=for-the-badge)
-
-![Version](https://img.shields.io/badge/version-ppc64le-blue.svg?style=for-the-badge)
-![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/ppc64le?style=for-the-badge)
-
-![Version](https://img.shields.io/badge/version-x86-blue.svg?style=for-the-badge)
-![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/maurosoft1973/alpine/x86?style=for-the-badge)
 
 ## Environment Variables:
 
@@ -105,6 +97,7 @@ When setting locale, also make sure to choose a locale otherwise it will be the 
 | ru_RU.UTF-8     |
 | sv_SE.UTF-8     |
 +-----------------+
+```
 
 ## Creating an instance (default timezone and locale)
 
