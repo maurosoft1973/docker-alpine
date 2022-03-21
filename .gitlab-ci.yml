@@ -112,13 +112,13 @@ push-test:
     variables:
         RELEASE: "TEST"
     script:
-        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -aa=aarch64 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
-        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -aa=armhf -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
-        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -aa=armv7 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
-        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -aa=ppc64le -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
-        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -aa=x86 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
-        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -aa=x86_64 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
-        - bash ./build-manifest.sh -di=$JOB_DOCKER_IMAGE -av=$JOB_ALPINE_VERSION -r=$RELEASE
+        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -aa=aarch64 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
+        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -aa=armhf -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
+        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -aa=armv7 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
+        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -aa=ppc64le -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
+        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -aa=x86 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
+        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -aa=x86_64 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
+        - bash ./build-manifest.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -av=$JOB_ALPINE_VERSION -r=$RELEASE
 
 push-current:
     stage: push
@@ -127,13 +127,13 @@ push-current:
     only:
         - master
     script:
-        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -aa=aarch64 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
-        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -aa=armhf -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
-        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -aa=armv7 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
-        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -aa=ppc64le -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
-        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -aa=x86 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
-        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -aa=x86_64 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
-        - bash ./build-manifest.sh -di=$JOB_DOCKER_IMAGE -av=$JOB_ALPINE_VERSION -r=$RELEASE
+        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -aa=aarch64 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
+        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -aa=armhf -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
+        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -aa=armv7 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
+        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -aa=ppc64le -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
+        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -aa=x86 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
+        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -aa=x86_64 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
+        - bash ./build-manifest.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -av=$JOB_ALPINE_VERSION -r=$RELEASE
 
 push-latest:
     stage: push
@@ -142,10 +142,10 @@ push-latest:
     only:
         - master
     script:
-        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -aa=aarch64 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
-        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -aa=armhf -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
-        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -aa=armv7 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
-        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -aa=ppc64le -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
-        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -aa=x86 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
-        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -aa=x86_64 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
-        - bash ./build-manifest.sh -di=$JOB_DOCKER_IMAGE -av=$JOB_ALPINE_VERSION -r=$RELEASE
+        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -aa=aarch64 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
+        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -aa=armhf -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
+        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -aa=armv7 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
+        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -aa=ppc64le -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
+        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -aa=x86 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
+        - bash ./push-image.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -aa=x86_64 -av=$JOB_ALPINE_VERSION -ad="$JOB_ALPINE_VERSION_DATE" -ar=$JOB_ALPINE_RELEASE -r=$RELEASE
+        - bash ./build-manifest.sh -di=$JOB_DOCKER_IMAGE -du=$DOCKER_HUB_USERNAME -dp=$DOCKER_HUB_PASSWORD -av=$JOB_ALPINE_VERSION -r=$RELEASE
