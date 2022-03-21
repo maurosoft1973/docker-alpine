@@ -79,9 +79,6 @@ if [ "$TOKEN" != "null" ]; then
     echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USER" --password-stdin
 
     if [ "$RELEASE" == "TEST" ]; then
-        echo "Push Image -> ${DOCKER_IMAGE}:${ALPINE_VERSION}-test-${ALPINE_ARCHITECTURE}"
-        docker push ${DOCKER_IMAGE}:${ALPINE_VERSION}-test-${ALPINE_ARCHITECTURE}
-
         echo "Push Image -> ${DOCKER_IMAGE}:test-${ALPINE_ARCHITECTURE}"
         docker push ${DOCKER_IMAGE}:test-${ALPINE_ARCHITECTURE}
     elif [ "$RELEASE" == "CURRENT" ]; then
